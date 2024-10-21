@@ -1,0 +1,10 @@
+.razdel1 {
+  background-color: rgba(0, 0, 255, 1);
+  color: rgba(0, 0, 0, 1);
+  font-size: 25px;
+  font-style: italic;
+}
+
+.conteyner {
+  width: 600px;
+}
