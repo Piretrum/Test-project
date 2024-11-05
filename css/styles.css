@@ -1,40 +1,191 @@
 :root {
-  --title-color: #ffffff;
+  --white: #ffffff;
+  --title-dark: #2e2f42; /* Navy blue #2E2F42 */
+  --accent-color: #4d5ae5; /* Iris #4D5AE5 */
+  --main-text: #434455; /* SLATE #434455 */
+  --background-light: #f4f4fd; /*  --CLOUD, #f4f4fd */
 }
 
-/* Пока что приклади "от балди" */
 body {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  color: var(--main-text);
 }
 
-h1 {
-  color: color-mix(in srgb, color percentage, color percentage);
+h2,
+h3 {
+  color: var(--title-dark);
 }
 
-h2 {
-  color: blueviolet;
-  color: ;
+a {
+  text-decoration: none;
 }
 
-.capitalized {
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11; /* 111.111% */
+  letter-spacing: 0.72px;
   text-transform: capitalize;
+  text-align: center;
+  color: var(--title-dark);
 }
-.uppercased {
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2; /* 120% */
+  letter-spacing: 0.4px;
+  color: var(--title-dark);
+}
+
+/*? ----------------HEADER---------------*/
+
+.header {
+}
+.header-nav {
+}
+.header-logo {
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.54px;
   text-transform: uppercase;
+  color: var(--title-dark);
 }
 
-/* Ada ПРИКЛАД НЕ З цього завдання. Видалити */
-button {
-  border: none;
-  background-color: transparent;
-  font-size: 5em;
+.header-logo span {
+  color: var(--accent-color);
 }
 
-button:hover,
-button:focus,
-button:hover ~ button,
-button:focus ~ button {
-  color: #f498ad;
+/* тут чомусь колір не спрацьовує. посилання - синього кольору!
+чому? */
+.header-menu {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.32px;
+  color: var(--title-dark);
+}
+.header-menu-item {
+}
+
+/* тут також чомусь колір не спрацьовує. посилання - синього кольору!
+чому? */
+.contact {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.32px;
+  color: var(--main-text);
+}
+
+.contact-list {
+}
+.contact-item {
+}
+.contact-link {
+}
+
+/*? -------------HERO------------- */
+
+.hero {
+  background-color: var(--main-text);
+}
+.hero-title {
+  text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07; /* 107.143% */
+  letter-spacing: 1.12px;
+  color: var(--white);
+}
+.hero-btn {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.64px;
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+/*? -------------ADVANTAGES эдвАнтеджес-преимущества--*/
+
+.adv {
+}
+
+.section-title {
+  /* в глобальных */
+}
+.adv-list {
+}
+.adv-item {
+}
+.subtitle {
+  /* в глобальных */
+}
+.adv-text {
+}
+
+/*? -------------WHAT ARE WE DOING. PRODUCTS-----------*/
+
+.section-title {
+  /* в глобальных */
+}
+.product-list {
+}
+.product-item {
+}
+.product-img {
+}
+
+/*? -------------OUR TEAM----------- */
+
+.team {
+}
+.section-title {
+  /* в глобальных */
+}
+.team-list {
+}
+.team-item > {
+}
+.team-img {
+}
+.subtitle {
+  /* в глобальных */
+}
+
+/*? -------------FOOTER-----------*/
+
+/*? -------------PORTFOLIO-----------*/
+
+.prtf-list-btn {
+  display: flex;
+}
+
+.prtf-btn {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--CORNFLOWER, #e7e9fc);
+  background: var(--background-light);
 }
