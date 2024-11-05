@@ -1,19 +1,40 @@
-/* Пока что приклади "от балди" */
-.razdel1 {
-  background-color: rgba(0, 0, 255, 1);
-  color: rgba(0, 0, 0, 1);
-  font-size: 25px;
-  font-style: italic;
+:root {
+  --title-color: #ffffff;
 }
 
-.conteyner {
-  width: 600px;
+/* Пока что приклади "от балди" */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 {
-  color: brown;
+  color: color-mix(in srgb, color percentage, color percentage);
 }
 
 h2 {
   color: blueviolet;
+  color: ;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+.uppercased {
+  text-transform: uppercase;
+}
+
+/* Ada ПРИКЛАД НЕ З цього завдання. Видалити */
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 5em;
+}
+
+button:hover,
+button:focus,
+button:hover ~ button,
+button:focus ~ button {
+  color: #f498ad;
 }

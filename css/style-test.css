@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(161, 108, 137);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  text-decoration: none;
+  list-style: none;
+}
+
+.one {
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border: 1px solid #c71616;
+}
+
+.item {
+  border: 1px solid #111;
+  width: calc((100%-20px) / 3);
+  padding: 20px;
+  background-color: rgb(143, 60, 118);
+}
+
+.two {
+}
+.three {
+}
