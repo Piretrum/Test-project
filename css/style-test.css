@@ -1,6 +1,7 @@
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
-  background-color: rgb(161, 108, 137);
+  background-color: rgb(255, 255, 255);
 }
 
 img {
@@ -14,29 +15,127 @@ ol {
   list-style: none;
 }
 
-.one {
-}
-.container {
-  /* max-width: 1200px; */
-  width: 100%;
-  margin: 0 auto;
-}
-
-.list {
+.page-container {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  border: 1px solid #c71616;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.item {
-  border: 1px solid #111;
-  width: calc((100%-20px) / 3);
-  /* padding: 20px; */
-  background-color: rgb(143, 60, 118);
+main {
+  flex-grow: 1;
+  width: 1400px;
+  padding: 15px;
 }
 
-.two {
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* outline: 1px solid #fa2e3f; */
+  background-color: #f3f1d6;
 }
-.three {
+
+. .nomer1 {
+  width: 200px;
+  height: 100px;
+  background-color: #db5cf5;
+  z-index: 2;
+}
+
+.nomer1:hover {
+  transform: skewX(30deg);
+}
+
+.nomer2 {
+  width: 200px;
+  height: 100px;
+  background-color: #aed308;
+  border-radius: 20px;
+  margin-top: 10px;
+  /* position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: -1; */
+  animation: ChangeColir 6s backwards 2s;
+}
+.nomer2:hover {
+  animation-play-state: paused;
+}
+
+/* .nomer3 {
+  width: 200px;
+  height: 100px;
+  background-color: transparent;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  z-index: 1;
+  transition-property: opacity, transform;
+  transition-duration: 1s;
+} */
+
+.wrap {
+  position: relative;
+}
+
+.nomer3:hover {
+  opacity: 0.5;
+  transform: translate(80px, 50px);
+}
+
+/* размещаем по центру */
+.parent {
+  display: flex;
+  width: 400px;
+  height: 200px;
+  background-color: #fff;
+  outline: 3px dashed #04960b;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-child {
+  width: 100px;
+  height: 80px;
+  background-color: #f10d0d;
+  outline: 1px solid #1f08f0;
+  transition: 2s background-color;
+}
+
+.parent:hover .box-child {
+  background-color: #c7f10d;
+}
+
+.footer {
+  height: 100px;
+  background-color: #363535;
+  color: #fff;
+}
+
+/* ------Анімації------- */
+@keyframes ChangeColir {
+  0% {
+    background-color: #aed308;
+    opacity: 0.5;
+    scale: 1.2;
+  }
+
+  33% {
+    background-color: #0860d3;
+    scale: 1;
+  }
+
+  66% {
+    background-color: cadetblue;
+
+    rotate: 360deg;
+    scale: 0.8;
+  }
+
+  100% {
+    background-color: chocolate;
+    scale: 0.6;
+  }
 }

@@ -4,11 +4,27 @@
   --accent-color: #4d5ae5; /* Iris #4D5AE5 */
   --main-text: #434455; /* SLATE #434455 */
   --background-light: #f4f4fd; /*  --CLOUD, #f4f4fd */
+  --hover-color: rgba(64, 75, 191, 1); /* --OCEAN, #404BBF */
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: var(--main-text);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.32px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 h2,
@@ -18,15 +34,36 @@ h3 {
 
 a {
   text-decoration: none;
+  font-style: normal;
 }
 
 ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 img {
   display: block;
   max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+section:not(.hero) {
+  /* outline: 1px solid #4bff04; */
+  padding-bottom: 120px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  /* outline: 1px solid #fa2e3f; */
 }
 
 .section-title {
@@ -47,12 +84,40 @@ img {
   color: var(--title-dark);
 }
 
+button {
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*? ----------------HEADER---------------*/
 
 .header {
 }
-.header-nav {
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header-logo {
   font-family: Raleway;
   font-size: 18px;
@@ -62,15 +127,19 @@ img {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   color: var(--title-dark);
+  margin-right: 76px;
 }
 
 .header-logo span {
   color: var(--accent-color);
 }
 
-/* тут чомусь колір не спрацьовує. посилання - синього кольору!
-чому? */
 .header-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.header-menu-item {
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -79,12 +148,27 @@ img {
   letter-spacing: 0.32px;
   color: var(--title-dark);
 }
-.header-menu-item {
+
+.header-menu-item:hover a {
+  color: var(--hover-color);
 }
 
-/* тут також чомусь колір не спрацьовує. посилання - синього кольору!
-чому? */
 .contact {
+}
+
+.contact-list {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
+}
+.contact-item {
+}
+
+.contact-item:hover a {
+  color: var(--hover-color);
+}
+
+.contact-link {
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -94,19 +178,29 @@ img {
   color: var(--main-text);
 }
 
-.contact-list {
-}
-.contact-item {
-}
-.contact-link {
-}
-
 /*? -------------HERO------------- */
 
 .hero {
   background-color: var(--main-text);
 }
+
+.hero-container {
+  padding-bottom: 188px;
+  padding-top: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/bgr-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .hero-title {
+  max-width: 496px;
+  /* margin-bottom: 48px; */
+  margin: 0 auto 48px;
   text-align: center;
   font-size: 56px;
   font-weight: 700;
@@ -115,6 +209,11 @@ img {
   color: var(--white);
 }
 .hero-btn {
+  display: block;
+  /* min-width: 169px;
+  height: 56px; */
+  padding: 16px 32px;
+  margin: 0 auto;
   font-family: Roboto;
   font-size: 16px;
   font-style: normal;
@@ -123,17 +222,31 @@ img {
   letter-spacing: 0.64px;
   color: var(--white);
   background-color: var(--accent-color);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover {
+  background-color: var(--hover-color);
 }
 
 /*? -------------ADVANTAGES эдвАнтеджес-преимущества--*/
 
 .adv {
+  padding-top: 120px;
 }
 
 .section-title {
   /* в глобальных */
 }
+
+.adv-container {
+}
+
 .adv-list {
+  display: flex;
+  gap: 24px;
 }
 .adv-item {
 }
@@ -141,6 +254,7 @@ img {
   /* в глобальных */
 }
 .adv-text {
+  margin-top: 8px;
 }
 
 /*? -------------WHAT ARE WE DOING. PRODUCTS-----------*/
@@ -149,6 +263,9 @@ img {
   /* в глобальных */
 }
 .product-list {
+  display: flex;
+  gap: 24px;
+  margin-top: 72px;
 }
 .product-item {
 }
@@ -158,26 +275,87 @@ img {
 /*? -------------OUR TEAM----------- */
 
 .team {
+  padding-top: 120px;
+  background: var(--background-light);
 }
 .section-title {
   /* в глобальных */
+  margin-bottom: 72px;
 }
 .team-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
 }
-.team-item > {
+.team-item {
+  background-color: var(--white);
+  padding-bottom: 32px;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .team-img {
+  margin-bottom: 32px;
 }
+
+.team h3 {
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.team p {
+  text-align: center;
+}
+
 .subtitle {
   /* в глобальных */
 }
 
 /*? -------------FOOTER-----------*/
 
+.footer {
+  background-color: var(--title-dark);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container {
+}
+.footer-container {
+}
+.footer-logo {
+  color: var(--background-light);
+  font-family: Raleway;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.16; /* 116.667% */
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+
+.footer-logo span {
+  color: var(--accent-color);
+}
+
+.footer-text {
+  padding-top: 16px;
+  max-width: 264px;
+  color: var(--background-light);
+}
+
 /*? -------------PORTFOLIO-----------*/
+
+.prtf-container {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 
 .prtf-list-btn {
   display: flex;
+  gap: 24px;
+  margin-bottom: 72px;
+  justify-content: center;
 }
 
 .prtf-btn {
@@ -187,5 +365,58 @@ img {
   align-items: center;
   border-radius: 4px;
   border: 1px solid var(--CORNFLOWER, #e7e9fc);
+
+  color: var(--accent-color);
   background: var(--background-light);
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.64px;
+}
+
+.prtf-btn:hover,
+.prtf-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.prtf-card-list {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  row-gap: 48px;
+  column-gap: 24px;
+  margin: 0 auto;
+}
+
+.prtf-item {
+  width: calc((100% - 2 * 24px) / 3);
+  border-radius: 0px 0px 4px 4px;
+  background: var(--white);
+}
+
+.prtf-item:is(:hover, :focus) {
+  border: 1px solid var(--background-light);
+  background: var(--WHITE, #fff);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.prtf-img {
+}
+
+.prtf-box-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 16px;
+  border: 1px solid var(--CORNFLOWER, #e7e9fc);
+  border-top: none;
 }
